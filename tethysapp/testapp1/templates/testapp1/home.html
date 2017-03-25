@@ -1,0 +1,44 @@
+{% extends "testapp1/base.html" %}
+
+{% block app_navigation_items %}
+<form name="myForm" id="lfform">
+<p>State:</p>
+
+<select id="myState">
+    <div id="StateDropdown" class="dropdown-content">
+    <option value="">Select State</option>
+    <option value="Utah" >Utah</option>
+    <option value="Idaho" >Idaho</option>
+    <option value="Montana" >Montana</option>
+    <option value="Oregon" >Oregon</option>
+    </div>
+</select>
+
+<p>Model Year:</p>
+
+<select id="myyear">
+    <div id="YearDropdown" class="dropdown-content">
+    <option value="">Select Year</option>
+    <option value="2008" >2008</option>
+    <option value="2014" >2014</option>
+    </div>
+</select>
+</form>
+
+
+{% endblock %}
+{% block app_content %}
+  <h1>Welcome!</h1>
+  <p>Congratulations on creating a new Tethys app!</p>
+  <link rel="stylesheet" href="https://openlayers.org/en/v4.0.1/css/ol.css" type="text/css">
+  <script src="https://openlayers.org/en/v4.0.1/build/ol.js"></script>
+
+  <div id="map" class="map"></div>
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}
